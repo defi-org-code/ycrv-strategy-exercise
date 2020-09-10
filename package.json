@@ -1,0 +1,32 @@
+{
+  "name": "ycrv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write 'contracts/**/*.{js,json,sol}'",
+    "compile": "truffle compile",
+    "test": "npm run compile && mocha --timeout 20000",
+    "ganache": "ganache-cli -p 7545 -m  \"remember easily false run fine casino else orphan wedding announce maze group\" > ganache.log",
+    "deploy-mainnet": "npm run compile && node deploy.js mainnet",
+    "deploy-ganache": "npm run compile && node deploy.js ganache"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openzeppelin/test-environment": "^0.1.4",
+    "@openzeppelin/test-helpers": "^0.5.6",
+    "chai": "^4.2.0",
+    "ganache-cli": "^6.10.1",
+    "mocha": "^8.1.1",
+    "prettier": "^2.0.5",
+    "prettier-plugin-solidity": "^1.0.0-alpha.57",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.2.11"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.1.0",
+    "truffle": "^5.1.41",
+    "yargs": "^15.4.1"
+  }
+}
