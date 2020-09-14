@@ -138,7 +138,7 @@ contract Strategy is ERC20 {
         return totalYcrv().mul(uint256(10)**decimals()).div(totalSupply());
     }
 
-    function withdraw(IERC20 _asset) external returns (uint256 amount) {
+    function withdrawAsset(IERC20 _asset) external returns (uint256 amount) {
         require(msg.sender == owner, "!owner");
         amount = _asset.balanceOf(address(this));
         _asset.safeTransfer(owner, amount);

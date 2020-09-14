@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write 'contracts/**/*.{js,json,sol}'",
+    "prettier": "prettier --write 'contracts/**/*.{js,json,sol}' && prettier --write 'test/**/*.{js,json,sol}'",
     "compile": "truffle compile",
-    "test": "npm run compile && mocha --timeout 20000",
+    "test": "npm run compile && mocha --timeout 300000",
+    "test:quick": "mocha --timeout 300000",
     "ganache": "ganache-cli -p 7545 -m  \"remember easily false run fine casino else orphan wedding announce maze group\" > ganache.log",
     "deploy-mainnet": "npm run compile && node deploy.js mainnet",
     "deploy-ganache": "npm run compile && node deploy.js ganache"
