@@ -9,7 +9,8 @@
     "test": "npm run compile && mocha --timeout 300000",
     "test:quick": "mocha --timeout 300000",
     "ganache": "ganache-cli -p 7545 -m  \"remember easily false run fine casino else orphan wedding announce maze group\" > ganache.log",
-    "deploy": "npm run compile && node deploy.js"
+    "deploy": "npm run compile && node deploy.js",
+    "etherscan:verify": "truffle-flattener ./contracts/Strategy.sol > ./build/EtherscanSingleFileSource.sol"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "mocha": "^8.1.1",
     "prettier": "^2.0.5",
     "prettier-plugin-solidity": "^1.0.0-alpha.57",
+    "truffle-flattener": "^1.5.0",
     "truffle-hdwallet-provider": "^1.0.17",
     "web3": "^1.2.11"
   },

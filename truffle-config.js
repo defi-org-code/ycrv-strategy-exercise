@@ -1,16 +1,16 @@
 module.exports = {
-    compilers: {
-        solc: {
-          version: "0.6.2"
-        }
-      },
-    outputType: "all",
-    compilerOptions: {
-        optimizer: {
+  compilers: {
+      solc: {
+        version: "0.6.2",
+        settings: {
+          optimizer: {
             enabled: true,
-            runs: 999999
+            runs: 200
+          }
         }
+      }
     },
-    contracts_directory: "./contracts",
-    contracts_build_directory: "./build/contracts",
+  outputType: "all",
+  contracts_directory: "./contracts",
+  contracts_build_directory: "./build/contracts",
 }
