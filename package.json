@@ -9,8 +9,7 @@
     "test": "npm run compile && mocha --timeout 300000",
     "test:quick": "mocha --timeout 300000",
     "ganache": "ganache-cli -p 7545 -m  \"remember easily false run fine casino else orphan wedding announce maze group\" > ganache.log",
-    "deploy-mainnet": "npm run compile && node deploy.js mainnet",
-    "deploy-ganache": "npm run compile && node deploy.js ganache"
+    "deploy": "npm run compile && node deploy.js"
   },
   "author": "",
   "license": "ISC",
